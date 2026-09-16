@@ -9,7 +9,7 @@
 				"-fdiagnostics-color=always",
 				"-g",
 				"-Wall",
-				"-std-c++17",
+				"-std=c++17",
 				"${fileDirname}/*.cpp",
 				"-o",
 				"${fileDirname}/${fileBasenameNoExtension}"
