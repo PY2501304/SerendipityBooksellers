@@ -73,6 +73,7 @@ void lookUpBook()
         if(bookTitle[i] == lookUp)
         {
             bookInfo(isbn[i], bookTitle[i], author[i], publisher[i], dateAdded[i], qtyOnHand[i], wholesale[i], retail[i]);
+            find = true;
         }
     }
 
@@ -146,8 +147,8 @@ void editBook()
             cout << "2. Edit Title\n";
             cout << "3. Edit Author\n";
             cout << "4. Edit Publisher\n";
-            cout << "5. Edit Date Added\n";
-            cout << "6. Edit Quantity on Hand\n";
+            cout << "5. Edit Date\n";
+            cout << "6. Edit Quantity\n";
             cout << "7. Edit Wholesale Cost\n";
             cout << "8. Edit Retail Price\n";
 
@@ -167,39 +168,39 @@ void editBook()
             {
                 case 1:
                     cout << "\nEnter the new ISBN: ";
-                    cin >> isbn[book];
+                    cin >> isbn[i];
                     cin.ignore();
                     break;
                 case 2:
                     cout << "\nEnter the new Title: ";
-                    cin >> bookTitle[book];
+                    cin >> bookTitle[i];
                     cin.ignore();
                     break;
                 case 3:
                     cout << "\nEnter the new Author: ";
-                    getline(cin, author[book]);
+                    getline(cin, author[i]);
                     break;
                 case 4:
                     cout << "\nEnter the new Publisher: ";
-                    getline(cin, publisher[book]);
+                    getline(cin, publisher[i]);
                     break;
                 case 5:
-                    cout << "\nEnter the new Date Added: ";
-                    getline(cin, dateAdded[book]);
+                    cout << "\nEnter the new Date: ";
+                    getline(cin, dateAdded[i]);
                     break;
                 case 6:
-                    cout << "\nEnter the new Quantity on Hand: ";
-                    cin >> qtyOnHand[book];
+                    cout << "\nEnter the new Quantity: ";
+                    cin >> qtyOnHand[i];
                     cin.ignore();
                     break;
                 case 7:
                     cout << "\nEnter the new Wholesale Cost: ";
-                    cin >> wholesale[book];
+                    cin >> wholesale[i];
                     cin.ignore();
                     break;
                 case 8:
                     cout << "\nEnter the new Retail Price: ";
-                    cin >> retail[book];
+                    cin >> retail[i];
                     cin.ignore();
                     break;
             }
@@ -209,73 +210,6 @@ void editBook()
     if(!find)
     {
         cout << "\nBook Not Found\n";
-    }
-
-    if(find)
-    {
-        int edit_choice;
-
-        cout << "\n1. Edit ISBN\n";
-        cout << "2. Edit Title\n";
-        cout << "3. Edit Author\n";
-        cout << "4. Edit Publisher\n";
-        cout << "5. Edit Date Added\n";
-        cout << "6. Edit Quantity on Hand\n";
-        cout << "7. Edit Wholesale Cost\n";
-        cout << "8. Edit Retail Price\n";
-
-        cout << "\nEnter Your Choice: ";
-        cin >> edit_choice;
-        cin.ignore();
-
-        while(edit_choice < 1 || edit_choice > 8)
-        {
-            cout << "\nPlease enter a number in the range 1 - 8\n";
-            cout << "\nEnter Your Choice: ";
-            cin >> edit_choice;
-            cin.ignore();
-        }
-
-        switch(edit_choice)
-        {
-            case 1:
-                cout << "\nEnter the new ISBN: ";
-                cin >> isbn[book];
-                cin.ignore();
-                break;
-            case 2:
-                cout << "\nEnter the new Title: ";
-                cin >> bookTitle[book];
-                cin.ignore();
-                break;
-            case 3:
-                cout << "\nEnter the new Author: ";
-                getline(cin, author[book]);
-                break;
-            case 4:
-                cout << "\nEnter the new Publisher: ";
-                getline(cin, publisher[book]);
-                break;
-            case 5:
-                cout << "\nEnter the new Date Added: ";
-                getline(cin, dateAdded[book]);
-                break;
-            case 6:
-                cout << "\nEnter the new Quantity on Hand: ";
-                cin >> qtyOnHand[book];
-                cin.ignore();
-                break;
-            case 7:
-                cout << "\nEnter the new Wholesale Cost: ";
-                cin >> wholesale[book];
-                cin.ignore();
-                break;
-            case 8:
-                cout << "\nEnter the new Retail Price: ";
-                cin >> retail[book];
-                cin.ignore();
-                break;
-        }
     }
 }
 
@@ -306,7 +240,6 @@ void deleteBook()
                     qtyOnHand[i] = 0;
                     wholesale[i] = 0.0;
                     retail[i] = 0.0;
-                    break;
                 }
             }
 

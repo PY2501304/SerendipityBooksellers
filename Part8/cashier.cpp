@@ -10,7 +10,6 @@ void cashier()
     int quantity;
     double price, subtotal, tax;
     bool repeat = true;
-    bool repeat_check = true;
     
     while(repeat)
     {
@@ -61,27 +60,10 @@ void cashier()
     	if(repeat_choice == "N" || repeat_choice == "n")
         {
             repeat = false;
-            repeat_check = false;
         }
-    	
-    	while(repeat_check)
-    	{
-        	if(repeat_choice == "Y" || repeat_choice == "y")
-        	{
-        	    repeat = true;
-        	    repeat_check = false;
-        	}
-        	else if(repeat_choice == "N" || repeat_choice == "n")
-        	{
-        	    repeat = false;
-        	    repeat_check = false;
-        	}
-        	else
-        	{
-        	    cout << "\nWould You Want Another Transcation?";
-        	    cout << "\nY/N: ";
-        	    cin >> repeat_choice;
-        	}
-    	}
+		else if(repeat_choice == "Y" || repeat_choice == "y")
+		{
+			repeat = true;
+		}
     }
 }
