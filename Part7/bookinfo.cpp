@@ -12,7 +12,7 @@ void bookInfo(string isbn, string title, string author, string publisher, string
     cout << "Title: " << title << "\n";
     cout << "Author: " << author << "\n";
     cout << "Publisher: " << publisher << "\n";
-    cout << "Data Added: " << date << "\n";
+    cout << "Date Added: " << date << "\n";
     cout << "Quantity-On-Hand: " << qty << "\n";
     cout << fixed << setprecision(2);
     cout << "Wholesale Cost: " << wholesale << "\n";
